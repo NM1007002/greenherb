@@ -1,44 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Shop</title>
+    <title>Green Herb - Buy 3 Zoli's Get 1 Free Monday!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
+        <div class="promo-banner">
+            🎉 MONDAY SPECIAL! 🎉 THENGISA amaZOLI ama-3, FUMANA ELI-1 MAHALA! 🎉
+        </div>
+        
         <h1>Welcome to Green Herb</h1>
-        <h1>KUVULIWE(OPEN)</h1>
+        <h2>KUVULIWE(OPEN)</h2>
         <nav>
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
             <a href="contact.html">Contact</a>
-            <a href="support.html">support</a>
+            <a href="support.html">Support</a>
         </nav>
     </header>
 
     <section class="featured-products">
+        <!-- Monday Deal Announcement -->
+        <div class="monday-deal">
+            <h2>🎯 ISIKHATI SOMONDAY DEAL! 🎯</h2>
+            <div class="deal-highlight">
+                THENGA amaZOLI ama-3, FUMANA ELI-1 MAHALA!
+            </div>
+            <p><strong>Buy 3 Zoli's, Get 1 FREE!</strong> - <em>Monday Special Only</em></p>
+            <p>🔥 Offer valid every Monday | Ukunikezwa kusebenza ngoMsombuluko kuphela 🔥</p>
+        </div>
+        
         <h3>Ukuba ufuna ulwazi malunga nezi Mveliso(Products), gcwalisa ifom kwiphepha loQhagamshelwano okanye iphepha leNkxaso</h3>
         <h3>Indawo yevenkile ikwiphepha okanye icala loqhagamshelwano(Contact).</h3>
+        
         <h2>Featured Items</h2>
-        <div class="product">
-            <img src="Screenshot (9).png" alt="Product 1">
+        
+        <div class="product deal">
+            <div class="deal-badge">Monday Deal!</div>
+            <img src="Screenshot (9).png" alt="Zoli (Joint) 1">
             <h3>Zoli (Joint) 1</h3>
             <h2>Kushiyeke...</h2>
-            <p>R5.00</p>
-            
+            <p><strong>R5.00 each</strong></p>
+            <p class="deal-included">✔ Included in Monday Deal</p>
+            <p><em>Buy 3 = R15.00 + Get 1 FREE!</em></p>
         </div>
-        <div class="product">
-            <img src="Screenshot (8).png" alt="Product 1">
+        
+        <div class="product deal">
+            <div class="deal-badge">Monday Deal!</div>
+            <img src="Screenshot (8).png" alt="Zoli 2">
             <h3>Zoli 2</h3>
-            <p>R4.00</p>
+            <p><strong>R4.00 each</strong></p>
             <h2>Ziphelile eze R4</h2>
+            <p class="deal-included">✔ Included in Monday Deal</p>
+            <p><em>Buy 3 = R12.00 + Get 1 FREE!</em></p>
         </div>
-        <h2>Ulwazi olulapha luya kuhlaziywa kanye ngosuku<h2>
-        <!-- More products -->
+        
+        <!-- Add more products as needed -->
+        
+        <h2>Ulwazi olulapha luya kuhlaziywa kanye ngosuku</h2>
+    </section>
+
+    <!-- Countdown Timer for Monday -->
+    <section class="countdown">
+        <h3>⏰ Countdown to Next Monday Deal:</h3>
+        <div id="countdown-timer" class="timer-display">
+            Loading countdown...
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Green Herb</p>
+        <p>&copy; 2025 Green Herb | Monday Special: Buy 3 Zoli's, Get 1 FREE!</p>
     </footer>
+
+    <script>
+        // Countdown timer for next Monday
+        function updateCountdown() {
+            const now = new Date();
+            const currentDay = now.getDay();
+            const daysUntilMonday = currentDay === 1 ? 7 : (8 - currentDay) % 7;
+            
+            const nextMonday = new Date(now);
+            nextMonday.setDate(now.getDate() + daysUntilMonday);
+            nextMonday.setHours(0, 0, 0, 0);
+            
+            const diff = nextMonday - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-timer').innerHTML = 
+                `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Highlight current day if it's Monday
+        const today = new Date().getDay();
+        if (today === 1) { // Monday
+            const banner = document.querySelector('.promo-banner');
+            banner.innerHTML += 
+                ' 🚨 <span class="today-active">TODAY IS MONDAY - DEAL ACTIVE NOW!</span> 🚨';
+        }
+    </script>
 </body>
 </html>
