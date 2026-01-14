@@ -109,3 +109,114 @@ footer {
     cursor: pointer;
     font-size: 16px;
 }
+/* Monday Deal Promotions */
+.promo-banner {
+    background: linear-gradient(135deg, #ff9900, #ff3300);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    animation: pulse 2s infinite;
+    margin-bottom: 20px;
+    border-bottom: 3px solid white;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.9; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9; }
+}
+
+.today-active {
+    background: yellow;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.monday-deal {
+    background-color: #fff8e1;
+    border: 3px dashed #ff9800;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.deal-highlight {
+    color: #e65100;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Product deal styling */
+.product.deal {
+    border: 2px solid #ff9800;
+    background-color: #fff3e0;
+    position: relative;
+    padding-top: 30px;
+}
+
+.deal-badge {
+    background: #ff5722;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    z-index: 1;
+}
+
+.deal-included {
+    color: #e65100;
+    font-weight: bold;
+}
+
+/* Countdown Timer */
+.countdown {
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.timer-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+/* Reminder Popup */
+.monday-reminder {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border: 3px solid #ff9800;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.reminder-button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
