@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Green Herb - Near BCC Main Campus Branch</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('background-image.jpg'); /* Add your background image filename here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.8);
+            background-blend-mode: overlay;
+        }
+        
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .branch-info {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .branch-highlight {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="promo-banner">
+            🎉 MONDAY SPECIAL! 🎉 BUY ZOLI AT R8, GET SPECIAL DEAL! 🎉
+        </div>
+        
+        <h1>Green Herb - Near BCC Main Campus Branch</h1>
+        <h2>KUVULIWE (OPEN)</h2>
+        <nav>
+            <a href="index.html">Main Branch</a>
+            <a href="near-bcc.html">Near BCC Campus</a>
+            <a href="town-branch.html">Town Branch</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <!-- Monday Deal Announcement -->
+        <div class="monday-deal">
+            <h2>🎯 MONDAY SPECIAL AT BCC CAMPUS BRANCH 🎯</h2>
+            <div class="deal-highlight">
+                THENGA IZOLI ku-R8, FUMANA AMAHALA!
+            </div>
+            <p><strong>Zoli Price: R8.00 each</strong></p>
+            <p><strong>Monday Special: Buy 2 Get 1 Free!</strong> - <em>Monday Only</em></p>
+            <p>🔥 Offer valid every Monday | Exclusive to this branch 🔥</p>
+            <p class="deal-included">Monday Deal: R16 for 3 Zoli's (Save R8!)</p>
+        </div>
+        
+        <div class="branch-info">
+            <h3>📍 Location Details:</h3>
+            <p><strong>Address:</strong> Near BCC Main Campus, Next to Campus Gate 2</p>
+            <p><strong>Operating Hours:</strong> 8:00 AM - 8:00 PM (Monday-Saturday)</p>
+            <p><strong>Special:</strong> Student Discount Available (Show Student ID)</p>
+        </div>
+        
+        <div class="branch-highlight">
+            <h3>🏫 Campus Branch Exclusive:</h3>
+            <p>• Closest to BCC Main Campus</p>
+            <p>• Student-friendly prices</p>
+            <p>• Quick service for students</p>
+            <p>• Special campus events and promotions</p>
+        </div>
+        
+        <div class="product">
+            <img src="zoli-campus.jpg" alt="Zoli at BCC Campus Branch">
+            <h3>Zoli (Campus Special)</h3>
+            <h2>Regular Price: R8.00 each</h2>
+            <p><strong>Monday Special: R16 for 3 Zoli's!</strong></p>
+            <p class="deal-included">✔ Included in Monday Campus Deal</p>
+            <p><em>Buy 2 = R16.00 + Get 1 FREE!</em></p>
+            <p>🔥 Campus Exclusive Price 🔥</p>
+        </div>
+        
+        <!-- Countdown Timer for Monday -->
+        <section class="countdown">
+            <h3>⏰ Countdown to Next Monday Campus Deal:</h3>
+            <div id="countdown-timer" class="timer-display">
+                Loading countdown...
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Green Herb - BCC Campus Branch | Monday Special: Buy 2 Zoli's, Get 1 FREE!</p>
+    </footer>
+
+    <script>
+        // Countdown timer for next Monday
+        function updateCountdown() {
+            const now = new Date();
+            const currentDay = now.getDay();
+            const daysUntilMonday = currentDay === 1 ? 7 : (8 - currentDay) % 7;
+            
+            const nextMonday = new Date(now);
+            nextMonday.setDate(now.getDate() + daysUntilMonday);
+            nextMonday.setHours(0, 0, 0, 0);
+            
+            const diff = nextMonday - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-timer').innerHTML = 
+                `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Highlight current day if it's Monday
+        const today = new Date().getDay();
+        if (today === 1) { // Monday
+            const banner = document.querySelector('.promo-banner');
+            banner.innerHTML += 
+                ' 🚨 <span class="today-active">TODAY IS MONDAY - CAMPUS DEAL ACTIVE NOW!</span> 🚨';
+        }
+    </script>
+</body>
+</html>
