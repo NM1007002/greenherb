@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Green Herb - Town Branch</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('background-image.jpg'); /* 2Added pages */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.8);
+            background-blend-mode: overlay;
+        }
+        
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .branch-info {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #2196F3;
+        }
+        
+        .branch-highlight {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .town-special {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="promo-banner">
+            🎉 MONDAY SPECIAL! 🎉 TOWN BRANCH ZOLI DEAL! 🎉
+        </div>
+        
+        <h1>Green Herb - Town Branch</h1>
+        <h2>KUVULIWE (OPEN)</h2>
+        <nav>
+            <a href="index.html">Main Branch</a>
+            <a href="near-bcc.html">Near BCC Campus</a>
+            <a href="town-branch.html">Town Branch</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <!-- Monday Deal Announcement -->
+        <div class="monday-deal">
+            <h2>🎯 MONDAY SPECIAL AT TOWN BRANCH 🎯</h2>
+            <div class="deal-highlight">
+                THENGA IZOLI ku-R8, FUMANA ISTHATHU!
+            </div>
+            <p><strong>Zoli Price: R8.00 each</strong></p>
+            <p><strong>Monday Special: Buy 3 Get 1 Free!</strong> - <em>Monday Only</em></p>
+            <p>🔥 Offer valid every Monday | Town Branch Exclusive 🔥</p>
+            <p class="deal-included">Monday Deal: R24 for 4 Zoli's (Save R8!)</p>
+        </div>
+        
+        <div class="town-special">
+            <h3>🏙️ TOWN CENTER EXCLUSIVE!</h3>
+            <p>Extended Hours | Central Location | Ample Parking</p>
+        </div>
+        
+        <div class="branch-info">
+            <h3>📍 Town Location Details:</h3>
+            <p><strong>Address:</strong> 123 Main Street, Town Center, Next to Bus Terminal</p>
+            <p><strong>Operating Hours:</strong> 7:00 AM - 10:00 PM (Monday-Saturday)</p>
+            <p><strong>Sunday Hours:</strong> 9:00 AM - 6:00 PM</p>
+            <p><strong>Features:</strong> Parking Available, ATM Nearby, Bus Accessible</p>
+        </div>
+        
+        <div class="branch-highlight">
+            <h3>🏪 Town Branch Benefits:</h3>
+            <p>• Most central location</p>
+            <p>• Extended business hours</p>
+            <p>• Easy access from all transport routes</p>
+            <p>• Weekend specials</p>
+            <p>• Bulk purchase discounts available</p>
+        </div>
+        
+        <div class="product">
+            <img src="zoli-town.jpg" alt="Zoli at Town Branch">
+            <h3>Zoli (Town Special)</h3>
+            <h2>Regular Price: R8.00 each</h2>
+            <p><strong>Monday Special: R24 for 4 Zoli's!</strong></p>
+            <p class="deal-included">✔ Included in Monday Town Deal</p>
+            <p><em>Buy 3 = R24.00 + Get 1 FREE!</em></p>
+            <p>🚌 Convenient Town Location 🚌</p>
+        </div>
+        
+        <!-- Countdown Timer for Monday -->
+        <section class="countdown">
+            <h3>⏰ Countdown to Next Monday Town Deal:</h3>
+            <div id="countdown-timer" class="timer-display">
+                Loading countdown...
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Green Herb - Town Branch | Monday Special: Buy 3 Zoli's, Get 1 FREE!</p>
+    </footer>
+
+    <script>
+        // Countdown timer for next Monday
+        function updateCountdown() {
+            const now = new Date();
+            const currentDay = now.getDay();
+            const daysUntilMonday = currentDay === 1 ? 7 : (8 - currentDay) % 7;
+            
+            const nextMonday = new Date(now);
+            nextMonday.setDate(now.getDate() + daysUntilMonday);
+            nextMonday.setHours(0, 0, 0, 0);
+            
+            const diff = nextMonday - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-timer').innerHTML = 
+                `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Highlight current day if it's Monday
+        const today = new Date().getDay();
+        if (today === 1) { // Monday
+            const banner = document.querySelector('.promo-banner');
+            banner.innerHTML += 
+                ' 🚨 <span class="today-active">TODAY IS MONDAY - TOWN DEAL ACTIVE NOW!</span> 🚨';
+        }
+    </script>
+</body>
+</html>
