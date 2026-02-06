@@ -2,7 +2,37 @@
 <html>
 <head>
     <title>Contact Us | My Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('2Added pages.jpg'), linear-gradient(to bottom, #f9f9f9, #e8f5e9);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f5f5f5;
+            background-blend-mode: overlay;
+            min-height: 100vh;
+        }
+        
+        /* Make content readable on background */
+        header, section, footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+            header, section, footer {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
