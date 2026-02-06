@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support | My Shop</title>
+    <style>
+        body {
+    background-image: url('2Added pages.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.15);
+    background-blend-mode: overlay;
+    min-height: 100vh;
+}
+
+/* Add content wrapper for better readability with minimal opacity */
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    backdrop-filter: blur(1px);
+}
+
+/* Style the FAQ section - very transparent */
+.faq {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    background: rgba(249, 249, 249, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 5px solid #4CAF50;
+}
+
+.faq-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+/* Style the support form - very transparent */
+.support-form {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.7), rgba(233, 245, 233, 0.7));
+    padding: 30px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border: 2px solid #e0e0e0;
+}
+
+.support-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.support-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.support-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.support-form button:hover {
+    background-color: #45a049;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+    
+    .content-wrapper {
+        margin: 10px;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .faq,
+    .support-form {
+        padding: 15px;
+    }
+    
+    .support-form form {
+        gap: 12px;
+    }
+}
+
+/* Add header styling - very transparent */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #4CAF50;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4CAF50;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: rgba(232, 245, 233, 0.6);
+}
+
+/* Footer styling - very transparent */
+footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-top: 2px solid #e0e0e0;
+}
+
+footer p {
+    color: #666;
+    margin: 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Customer Support</h1>
+        <nav>
+    <a href="Index.html">Home</a>
+    <a href="Products.html">Products</a>
+    <a href="Contact.html">Contact</a>
+    <a href="Near-Bcc.html">Near-Bcc</a>
+    <a href="Town-Branch.html">Town-Branch</a>
+    <a href="Support.html">Support</a>
+</nav>
+    </header>
+
+    <main>
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How do I place an order?</h3>
+                <p>Go to the <a href="products.html">Products</a> page, select your items, and click "Add to Cart." Proceed to checkout when ready.</p>
+            </div>
+        </section>
+
+        <!-- Contact Support Form -->
+        <section class="support-form">
+            <h2>Need More Help?</h2>
+            <form id="supportForm" action="https://formspree.io/f/mvgaeyel" method="POST">
+  <input type="text" name="name" id="name" placeholder="Your Name" required />
+  <input type="email" name="email" id="email" placeholder="Email" required />
+  <select name="issue" id="issue" required>
+    <option value="">Select an issue</option>
+    <option value="order">Order Issue</option>
+    <option value="product">Product Question</option>
+    <option value="other">Other</option>
+  </select>
+  <textarea name="description" id="description" placeholder="Describe your issue..." required></textarea>
+  <button type="submit">Submit Request</button>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Green Herb | Email: libuserx@gmail.com</p>
+    </footer>
+</body>
+</html>

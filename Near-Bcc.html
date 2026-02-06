@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Green Herb - Near BCC Main Campus Branch</title>
+    <style>
+        body {
+            background-image: url('2Added pages.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.15);
+            background-blend-mode: overlay;
+            min-height: 100vh;
+        }
+        
+        /* Content wrapper */
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.75);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            backdrop-filter: blur(1px);
+        }
+        
+        /* Promo banner */
+        .promo-banner {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+        
+        /* Header styling */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #2196F3;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        header h2 {
+            color: #4CAF50;
+            font-style: italic;
+            margin-top: 0;
+        }
+        
+        /* Navigation styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #2196F3;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            border: 2px solid #2196F3;
+        }
+        
+        nav a:hover {
+            background-color: rgba(33, 150, 243, 0.1);
+        }
+        
+        /* Monday deal styling */
+        .monday-deal {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .deal-highlight {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        
+        .deal-included {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        /* Branch info styling */
+        .branch-info {
+            background-color: rgba(249, 249, 249, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #2196F3;
+        }
+        
+        .branch-highlight {
+            background-color: rgba(227, 242, 253, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        /* Product styling */
+        .product {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .product img {
+            max-width: 200px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        /* Countdown timer */
+        .countdown {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #4CAF50;
+        }
+        
+        .timer-display {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2196F3;
+            padding: 10px;
+            background-color: rgba(227, 242, 253, 0.8);
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        /* Today active indicator */
+        .today-active {
+            color: #ffeb3b;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* Footer styling */
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            border-top: 2px solid #2196F3;
+        }
+        
+        footer p {
+            color: #666;
+            margin: 0;
+        }
+        
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+            
+            .content-wrapper {
+                margin: 10px;
+                padding: 15px;
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .product img {
+                max-width: 150px;
+            }
+            
+            .timer-display {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="promo-banner">
+                🎉 MONDAY SPECIAL! 🎉 THENGA iZOLI MGE R8, UFUMANE ISAPHULELO 🎉
+            </div>
+            
+            <h1>Green Herb - Near BCC Main Campus Branch</h1>
+            <h2>KUVULIWE (OPEN)</h2>
+            <nav>
+                <a href="Index.html">Main Branch</a>
+                <a href="Near-Bcc.html">Near BCC Campus</a>
+                <a href="Town-Branch.html">Town Branch</a>
+                <a href="Products.html">Products</a>
+                <a href="Support.html">Support</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Monday Deal Announcement -->
+        <div class="monday-deal">
+            <h2>🎯 MONDAY SPECIAL AT BCC CAMPUS BRANCH 🎯</h2>
+            <div class="deal-highlight">
+                THENGA IZOLI zbey-3, FUMANA 1 AMAHALA!
+            </div>
+            <p><strong>Zoli Price: R8.00 each</strong></p>
+            <p><strong>Monday Special: Buy 3 Get 1 Free!</strong> - <em>Monday Only</em></p>
+            <p>🔥 Offer valid every Monday | Exclusive to this branch 🔥</p>
+            <p class="deal-included">Monday Deal: R24 for 4 Zoli's (Save R8!)</p>
+        </div>
+        
+        <div class="branch-info">
+            <h3>📍 Location Details:</h3>
+            <p><strong>Address:</strong> Near BCC Main Campus, Next to Campus Gate 2</p>
+            <p><strong>Operating Hours:</strong> Buza kwi page he Support (Monday-Friday)</p>
+            <p><strong>Special:</strong> Student Discount Available (Show Student ID/card)</p>
+        </div>
+        
+        <div class="branch-highlight">
+            <h3>🏫 Campus Branch Exclusive:</h3>
+            <p>• Closest to BCC Main Campus</p>
+            <p>• Student-friendly prices</p>
+            <p>• Quick service for students</p>
+        </div>
+        
+        <div class="product">
+            <img src="zoli-campus.jpg" alt="Zoli at BCC Campus Branch">
+            <h3>Zoli (Campus Special)</h3>
+            <h2>Regular Price: R8.00 each</h2>
+            <p><strong>Monday Special: R24 for 4 Zoli's!</strong></p>
+            <p class="deal-included">✔ Included in Monday Campus Deal</p>
+            <p><em>Buy 3 = R24 + Get 1 FREE!</em></p>
+            <p>🔥 Campus Exclusive Price 🔥</p>
+        </div>
+        
+        <!-- Countdown Timer for Monday -->
+        <section class="countdown">
+            <h3>⏰ Countdown to Next Monday Campus Deal:</h3>
+            <div id="countdown-timer" class="timer-display">
+                Loading countdown...
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Green Herb - BCC Campus Branch | Monday Special: Buy 3 Zoli's, Get 1 FREE!</p>
+        </footer>
+    </div>
+
+    <script>
+        // Countdown timer for next Monday
+        function updateCountdown() {
+            const now = new Date();
+            const currentDay = now.getDay();
+            const daysUntilMonday = currentDay === 1 ? 7 : (8 - currentDay) % 7;
+            
+            const nextMonday = new Date(now);
+            nextMonday.setDate(now.getDate() + daysUntilMonday);
+            nextMonday.setHours(0, 0, 0, 0);
+            
+            const diff = nextMonday - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-timer').innerHTML = 
+                `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Highlight current day if it's Monday
+        const today = new Date().getDay();
+        if (today === 1) { // Monday
+            const banner = document.querySelector('.promo-banner');
+            banner.innerHTML += 
+                ' 🚨 <span class="today-active">TODAY IS MONDAY - CAMPUS DEAL ACTIVE NOW!</span> 🚨';
+        }
+    </script>
+</body>
+</html>
