@@ -5,12 +5,29 @@
     <style>
         /* Base styling */
         body {
+            background-image: url('2Added pages.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.15);
+            background-blend-mode: overlay;
+            min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
             color: #333;
+        }
+        
+        /* Content wrapper for better readability */
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.75);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            backdrop-filter: blur(1px);
         }
         
         /* Promo banner */
@@ -24,6 +41,8 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             animation: pulse 2s infinite;
             border-bottom: 3px solid #ff4757;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
         
         @keyframes pulse {
@@ -34,24 +53,23 @@
         
         /* Header styling */
         header {
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            color: white;
-            padding: 30px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-bottom: 3px solid #4CAF50;
+            margin-bottom: 20px;
+            border-radius: 10px;
         }
         
         header h1 {
-            margin: 10px 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            color: #2c3e50;
+            margin-bottom: 10px;
         }
         
         header h2 {
-            margin: 10px 0 20px;
+            color: #4CAF50;
             font-style: italic;
-            color: #e8f5e9;
-            font-weight: normal;
+            margin-top: 0;
         }
         
         /* Navigation styling */
@@ -59,94 +77,73 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            gap: 15px;
+            margin-top: 15px;
         }
         
         nav a {
             text-decoration: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            transition: all 0.3s ease;
+            color: #4CAF50;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
             font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.3);
         }
         
         nav a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Content wrapper */
-        .content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            background-color: rgba(76, 175, 80, 0.1);
         }
         
         /* Featured products section */
         .featured-products {
-            background-color: white;
-            padding: 30px;
-            margin: 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         /* Monday deal section */
         .monday-deal {
             background: linear-gradient(135deg, #2196F3, #1976D2);
             color: white;
-            padding: 25px;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
             text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
-            border: 3px solid rgba(255, 255, 255, 0.2);
         }
         
         .deal-highlight {
             background-color: rgba(255, 255, 255, 0.2);
             padding: 15px;
             border-radius: 8px;
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: bold;
-            margin: 20px 0;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin: 15px 0;
         }
         
         /* Product styling */
         .product-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+            gap: 25px;
+            margin: 30px 0;
         }
         
         .product {
-            background: linear-gradient(145deg, #ffffff, #f5f5f5);
-            padding: 25px;
-            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            border: 2px solid #e0e0e0;
+            transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
             overflow: hidden;
-            border: 1px solid #e0e0e0;
         }
         
         .product:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
         .deal-badge {
@@ -167,111 +164,100 @@
             max-width: 200px;
             height: 200px;
             object-fit: cover;
-            border-radius: 10px;
-            margin: 20px 0;
-            border: 4px solid #e0e0e0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
         }
         
         .product h3 {
             color: #2c3e50;
-            margin: 15px 0 10px;
-            font-size: 1.5em;
-        }
-        
-        .product h2 {
-            color: #4CAF50;
-            margin: 10px 0;
-            font-size: 1.2em;
-        }
-        
-        .product p {
-            margin: 8px 0;
-            color: #555;
+            margin: 10px 0 5px 0;
+            font-size: 1.3em;
         }
         
         .product .price {
-            font-size: 1.4em;
             color: #2196F3;
             font-weight: bold;
-            margin: 15px 0;
+            font-size: 1.2em;
+            margin: 10px 0;
         }
         
         .deal-included {
-            background-color: #e8f5e9;
+            background-color: rgba(76, 175, 80, 0.1);
             color: #2E7D32;
-            padding: 8px 15px;
-            border-radius: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
             display: inline-block;
             margin: 10px 0;
             font-weight: bold;
-            border: 1px solid #c8e6c9;
         }
         
         /* Countdown timer */
         .countdown {
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
             text-align: center;
-            margin: 40px 20px;
-            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+            border: 2px solid #4CAF50;
         }
         
         .timer-display {
-            font-size: 2em;
+            font-size: 1.5em;
             font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            font-family: 'Courier New', monospace;
+            color: #2196F3;
+            padding: 10px;
+            background-color: rgba(227, 242, 253, 0.8);
+            border-radius: 8px;
+            margin-top: 10px;
         }
         
         /* Information text */
         h3:not(.product h3) {
             color: #555;
             line-height: 1.6;
-            margin: 20px 0;
+            margin: 15px 0;
             padding: 15px;
-            background-color: #f9f9f9;
+            background-color: rgba(249, 249, 249, 0.7);
             border-radius: 8px;
             border-left: 4px solid #4CAF50;
         }
         
         /* Today active indicator */
         .today-active {
-            color: #FFEB3B;
+            color: #ffeb3b;
             font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 5px 10px;
-            border-radius: 4px;
-            margin-left: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         /* Footer styling */
         footer {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            color: white;
-            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
             text-align: center;
-            margin-top: 40px;
-            border-top: 5px solid #4CAF50;
+            margin-top: 30px;
+            border-top: 2px solid #4CAF50;
         }
         
         footer p {
+            color: #666;
             margin: 0;
-            font-size: 1.1em;
-            color: #ecf0f1;
         }
         
         /* Responsive design */
         @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+            
+            .content-wrapper {
+                margin: 10px;
+                padding: 15px;
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+            
             header {
-                padding: 20px 15px;
+                padding: 15px;
             }
             
             header h1 {
@@ -281,6 +267,7 @@
             nav {
                 flex-direction: column;
                 align-items: center;
+                gap: 10px;
             }
             
             nav a {
@@ -289,8 +276,7 @@
             }
             
             .featured-products {
-                margin: 10px;
-                padding: 20px;
+                padding: 15px;
             }
             
             .product-list {
@@ -299,13 +285,13 @@
             }
             
             .timer-display {
-                font-size: 1.5em;
-                padding: 15px;
+                font-size: 1.2em;
+                padding: 10px;
             }
             
             .countdown, .monday-deal {
-                margin: 20px 10px;
-                padding: 20px;
+                margin: 15px 0;
+                padding: 15px;
             }
         }
         
@@ -313,17 +299,6 @@
             .product-list {
                 grid-template-columns: repeat(2, 1fr);
             }
-        }
-        
-        /* Animation for deal products */
-        @keyframes dealPulse {
-            0% { box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); }
-            50% { box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4); }
-            100% { box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); }
-        }
-        
-        .product.deal {
-            animation: dealPulse 3s infinite;
         }
     </style>
 </head>
@@ -354,7 +329,7 @@
                     THENGA IIZOLI eziy-3, FUMANA ey-1 MAHALA!
                 </div>
                 <p><strong>Buy 3 Zoli's, Get 1 FREE!</strong> - <em>Monday Special Only</em></p>
-                <p>🔥 Offer valid on 19 Jan Monday | Landela imiqathango 🔥</p>
+                <p>🔥 Offer valid every Monday | Landela imiqathango 🔥</p>
             </div>
             
             <h3>Ukuba ufuna ulwazi malunga nezi Mveliso (Products), gcwalisa ifom kwiphepha loQhagamshelwano okanye iphepha leNkxaso</h3>
