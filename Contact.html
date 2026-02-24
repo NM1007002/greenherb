@@ -213,5 +213,75 @@
     <footer>
         <p>&copy; 2025 Green Herb</p>
     </footer>
+        <script>
+        function validateForm() {
+            // Get form fields
+            const name = document.getElementById('name')?.value;
+            const email = document.getElementById('email')?.value;
+            const description = document.getElementById('description')?.value;
+            const issue = document.getElementById('issue')?.value;
+            
+            // Name validation
+            if (!name || name.trim() === '') {
+                alert('Please enter your name');
+                return false;
+            }
+            
+            // Email validation
+            if (!email || email.trim() === '') {
+                alert('Please enter your email');
+                return false;
+            }
+            
+            // Email format validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+            
+            // Issue selection validation
+            if (!issue || issue === '') {
+                alert('Please select an issue type');
+                return false;
+            }
+            
+            // Description validation
+            if (!description || description.trim() === '') {
+                alert('Please describe your issue');
+                return false;
+            }
+            
+            // Optional: Sanitize inputs before submission
+            const sanitizedName = sanitizeInput(name);
+            const sanitizedEmail = sanitizeInput(email);
+            const sanitizedDescription = sanitizeInput(description);
+            
+            // You could store sanitized values in data attributes if needed
+            document.getElementById('name').setAttribute('data-sanitized', sanitizedName);
+            
+            return true; // Allow form submission
+        }
+        
+        // Helper function to sanitize input
+        function sanitizeInput(input) {
+            if (!input) return '';
+            const div = document.createElement('div');
+            div.textContent = input;
+            return div.innerHTML;
+        }
+        
+        // Optional: Add real-time validation feedback
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    if (!validateForm()) {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
