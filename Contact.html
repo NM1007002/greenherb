@@ -185,7 +185,8 @@
 
     <section class="contact-form">
         <h2>Send a Message</h2>
-        <form id="contactForm" action="https://formspree.io/f/mvgaeyel" method="POST">
+        <form id="supportForm" action="https://formspree.io/f/mvgaeyel" method="POST" 
+      onsubmit="return validateForm()">
   <input type="text" name="name" id="name" placeholder="Your Name" required />
   <input type="email" name="email" id="email" placeholder="Email" required />
   <select name="issue" id="issue" required>
