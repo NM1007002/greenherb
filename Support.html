@@ -196,7 +196,8 @@ footer p {
         <!-- Contact Support Form -->
         <section class="support-form">
             <h2>Need More Help?</h2>
-            <form id="supportForm" action="https://formspree.io/f/mvgaeyel" method="POST">
+            <form id="supportForm" action="https://formspree.io/f/mvgaeyel" method="POST" 
+      onsubmit="return validateForm()">
   <input type="text" name="name" id="name" placeholder="Your Name" required />
   <input type="email" name="email" id="email" placeholder="Email" required />
   <select name="issue" id="issue" required>
