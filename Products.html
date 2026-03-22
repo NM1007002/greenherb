@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products | Green Herb</title>
+    <style>
+        body {
+            background-image: url('2Added pages.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.15);
+            background-blend-mode: overlay;
+            min-height: 100vh;
+        }
+        
+        /* Content wrapper */
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.75);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            backdrop-filter: blur(1px);
+        }
+        
+        /* Header styling */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        /* Navigation styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #4CAF50;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            background-color: rgba(232, 245, 233, 0.6);
+        }
+        
+        /* Evening special note (same style as index) */
+        .evening-special {
+            background: linear-gradient(135deg, #f5b042, #f57c00);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .evening-special p {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+        .price-badge {
+            background-color: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-family: monospace;
+        }
+        
+        /* Product list styling */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .product {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product img {
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            background-color: #f0f0f0;
+        }
+        
+        .product h3 {
+            color: #2c3e50;
+            margin: 10px 0 5px 0;
+            font-size: 1.3em;
+        }
+        
+        .product .price {
+            color: #2196F3;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .evening-note {
+            font-size: 0.85rem;
+            background: #fff3e0;
+            padding: 6px;
+            border-radius: 20px;
+            margin-top: 8px;
+            color: #e67e22;
+            font-weight: bold;
+        }
+        
+        .deal-included {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #2E7D32;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        /* Footer styling */
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        footer p {
+            color: #666;
+            margin: 0;
+        }
+        
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+            .content-wrapper {
+                margin: 10px;
+                padding: 15px;
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+            .product-list {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .product-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <h1>Our Products</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Products.html">Products</a>
+                <a href="Support.html">Support</a>
+                <a href="Near-Bcc.html">Near BCC</a>
+                <a href="Town-Branch.html">Town Branch</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Evening Special Note (same as homepage) -->
+        <div class="evening-special">
+            <p>🌙 <strong>EVERYDAY AFTER 21:00 (9:00 PM)</strong> 🌙</p>
+            <p>🍃 <strong>Zoli (Joint)</strong> → <span class="price-badge">R8.00 each</span> (instead of R5.00)</p>
+            <p>🛍️ <strong>Crushed Bag</strong> → <span class="price-badge">R10.00 each</span> (no change)</p>
+            <p>🎁 The <strong>Monday "Buy 3 Get 1 FREE"</strong> works with the evening R8 price too!</p>
+        </div>
+
+        <!-- Product grid with both items -->
+        <section class="product-list">
+            <!-- Zoli Joint -->
+            <div class="product">
+                <img src="Screenshot (9).png" alt="Zoli Joint" onerror="this.src='https://placehold.co/200x200?text=Zoli+Joint'">
+                <h3>Zoli (Joint)</h3>
+                <div class="price">R5.00 each</div>
+                <div class="evening-note">🌙 After 21:00 → R8.00 (evening rate)</div>
+                <p class="deal-included">✔ Included in Monday Deal (Buy 3 Get 1 FREE)</p>
+                <p><em>Monday deal applies even at R8 evening price!</em></p>
+            </div>
+            
+            <!-- Crushed Bag -->
+            <div class="product">
+                <img src="Bags 20260322_125022" alt="Crushed Bag" onerror="this.src='https://placehold.co/200x200?text=Crushed+Bag'">
+                <h3>Crushed Bag</h3>
+                <div class="price">R10.00 each</div>
+                <div class="evening-note">🌙 Evening price stays R10.00</div>
+                <p class="deal-included">✔ Included in Monday Deal (Buy 3 Get 1 FREE)</p>
+                <p><em>Buy 3 = R30.00 + Get 1 FREE Crushed Bag</em></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Green Herb | Daily after 21:00 Zoli = R8, Bag = R10 | Monday: Buy 3 Get 1 FREE on both items</p>
+        </footer>
+    </div>
+</body>
+</html>
